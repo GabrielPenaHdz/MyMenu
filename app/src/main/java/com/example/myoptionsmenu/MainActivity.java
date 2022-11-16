@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case R.id.menuNuevoId:
+            case R.id.menuCopiarId:
+            case R.id.menuAyudaId:
+            case R.id.menuPegarId:
                 seleccion = String.format("opción %s", item.getTitle().toString());
                 break;
             default:
