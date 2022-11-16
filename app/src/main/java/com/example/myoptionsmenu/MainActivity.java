@@ -1,10 +1,13 @@
 package com.example.myoptionsmenu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +26,23 @@ public class MainActivity extends AppCompatActivity {
         menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.mi_menu, menu);
         return flag;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        String seleccion = null;
+        switch (item.getItemId())
+        {
+            case R.id.menuNuevoId:
+                seleccion = String.format("opción %s", item.getTitle().toString());
+                break;
+            default:
+                seleccion = "Sin opción";
+                break;
+        }
+        Toast.makeText(getBaseContext(), seleccion, Toast.LENGTH_SHORT).show();
+        return super.onOptionsItemSelected(item);
 
     }
 }
