@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyoptionsMenu</string>
+    <string name="menu_nuevo">Nuevo</string>
+    <string name="menu_copiar">Copiar</string>
+    <string name="menu_pegar">Pegar</string>
+    <string name="menu_ayuda">Ayuda</string>
+</resources>
